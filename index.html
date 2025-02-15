@@ -24,14 +24,29 @@
     }
     if (systemInput === 'Rock') {
         score.Ties+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Rock. Systems input is ${systemInput}.Its a tie
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     } else if (systemInput === 'Paper') {
         score.Losses+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Rock. Systems input is ${systemInput}.You lose
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     } else if (systemInput === 'Scissor') {
         score.Wins+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Rock. Systems input is ${systemInput}.You win
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     }
@@ -51,14 +66,29 @@
     }
     if (systemInput1 === 'Rock') {
         score.Wins+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Paper. Systems input is ${systemInput1}.You win
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     } else if (systemInput1 === 'Paper') {
         score.Ties+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Paper. Systems input is ${systemInput1}.Its a tie
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     } else if (systemInput1 === 'Scissor') {
         score.Losses+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Paper. Systems input is ${systemInput1}.You lose
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     }
@@ -78,23 +108,46 @@
     }
     if (systemInput2 === 'Rock') {
         score.Losses+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Scissor. Systems input is ${systemInput2}.You lose
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     } else if (systemInput2 === 'Paper') {
         score.Wins+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Scissor. Systems input is ${systemInput2}.You win
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     } else if (systemInput2 === 'Scissor') {
         score.Ties+=1
+        function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+        updateScore(); 
         alert(`Your input is Scissor. Systems input is ${systemInput2}.Its a tie
         Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
     }
     ">Scissor</button>
+    <p class="js"></p>
     <button onclick="
     score.Wins = 0
     score.Losses = 0
     score.Ties = 0
+    function updateScore() {
+        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
+    }
+
+    updateScore(); 
     alert('The score has been reset')
     ">Reset Score</button>
+    
 
-</body></html>
+</body>
+</html>
