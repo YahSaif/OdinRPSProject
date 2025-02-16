@@ -1,153 +1,31 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>Rock Paper Scissor Game</h1>
+    <p>Rock Paper Scissor Game</p>
     <button onclick="
-    let randomNumber = Math.random();
-    let systemInput = '';
-    if (randomNumber >= 0 &amp;&amp; randomNumber <= 0.33) {
-        systemInput = 'Rock';
-        console.log(systemInput);
-    } else if (randomNumber >= 0.34 && randomNumber <= 0.66) {
-        systemInput = 'Paper';
-        console.log(systemInput);
-    } else {
-        systemInput = 'Scissor';
-        console.log(systemInput);
-    }
-    if (systemInput === 'Rock') {
-        score.Ties+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Rock. Systems input is ${systemInput}.Its a tie
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    } else if (systemInput === 'Paper') {
-        score.Losses+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Rock. Systems input is ${systemInput}.You lose
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    } else if (systemInput === 'Scissor') {
-        score.Wins+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Rock. Systems input is ${systemInput}.You win
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    }
+        rock()
+        scoreRock()
     ">Rock</button>
     <button onclick="
-    let randomNumber1 = Math.random();
-    let systemInput1 = '';
-    if (randomNumber1 >= 0 && randomNumber1 <= 0.33) {
-        systemInput1 = 'Rock';
-        console.log(systemInput1);
-    } else if (randomNumber1 >= 0.34 && randomNumber1 <= 0.66) {
-        systemInput1 = 'Paper';
-        console.log(systemInput1);
-    } else {
-        systemInput1 = 'Scissor';
-        console.log(systemInput1);
-    }
-    if (systemInput1 === 'Rock') {
-        score.Wins+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Paper. Systems input is ${systemInput1}.You win
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    } else if (systemInput1 === 'Paper') {
-        score.Ties+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Paper. Systems input is ${systemInput1}.Its a tie
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    } else if (systemInput1 === 'Scissor') {
-        score.Losses+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Paper. Systems input is ${systemInput1}.You lose
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    }
+        paper()
+        scorePaper()
     ">Paper</button>
     <button onclick="
-    let randomNumber2 = Math.random();
-    let systemInput2 = '';
-    if (randomNumber2 >= 0 && randomNumber2 <= 0.33) {
-        systemInput2 = 'Rock';
-        console.log(systemInput2);
-    } else if (randomNumber2 >= 0.34 && randomNumber2 <= 0.66) {
-        systemInput2 = 'Paper';
-        console.log(systemInput2);
-    } else {
-        systemInput2 = 'Scissor';
-        console.log(systemInput2);
-    }
-    if (systemInput2 === 'Rock') {
-        score.Losses+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Scissor. Systems input is ${systemInput2}.You lose
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    } else if (systemInput2 === 'Paper') {
-        score.Wins+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Scissor. Systems input is ${systemInput2}.You win
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    } else if (systemInput2 === 'Scissor') {
-        score.Ties+=1
-        function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-        updateScore(); 
-        alert(`Your input is Scissor. Systems input is ${systemInput2}.Its a tie
-        Wins:${score.Wins} Losses:${score.Losses} Ties${score.Ties}`);
-    }
+        scissor()
+        scoreScissor()
     ">Scissor</button>
-    <p class="js"></p>
     <button onclick="
-    score.Wins = 0
-    score.Losses = 0
-    score.Ties = 0
-    function updateScore() {
-        document.querySelector('.js').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Ties}`;
-    }
-
-    updateScore(); 
-    alert('The score has been reset')
-    ">Reset Score</button>
-    
-
+        rsc()
+    ">Reset score</button>
+    <p class='rt'></p>
+    <p class='sc'></p>
+    <p class="rs"></p>
+<script src="index.js"></script>
 </body>
 </html>
